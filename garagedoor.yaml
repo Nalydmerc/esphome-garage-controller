@@ -1,0 +1,78 @@
+esphome:
+  name: garagedoorsensor
+  friendly_name: GarageDoorSensor
+
+esp8266:
+  board: d1_mini
+  early_pin_init: false
+  # restore_from_flash: true
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "YOUR_KEY_HERE"
+
+ota:
+  password: "a7951386494401ee1deefbe8c37c24f8"
+
+wifi:
+  fast_connect: on
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  use_address: YOUR_IP_HERE
+  on_connect:
+    - then:
+      - switch.turn_on: led
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Garagedoorsensor"
+    password: "YOUR_PASSWORD_HERE"
+
+captive_portal:
+
+binary_sensor:
+  - platform: gpio
+    pin: 16
+    name: "Right Garage Door"
+    device_class: garage_door
+  - platform: gpio
+    pin: 14
+    name: "Left Garage Door"
+    device_class: garage_door
+
+switch:
+  - platform: gpio
+    pin: 5
+    id: right_garage
+    restore_mode: ALWAYS_OFF
+  - platform: gpio
+    pin: 4
+    id: left_garage
+    restore_mode: ALWAYS_OFF
+  - platform: gpio
+    pin: 2
+    id: led
+
+
+button:
+  - platform: template
+    name: Left Garage Button
+    on_press:
+      - then:
+        - logger.log: "Left garage door toggled"
+        - switch.turn_on: left_garage
+        - delay: 500ms
+        - switch.turn_off: left_garage
+  - platform: template
+    name: Right Garage Button
+    on_press:
+      - then:
+        - logger.log: "Right garage door toggled"
+        - switch.turn_on: right_garage
+        - delay: 500ms
+        - switch.turn_off: right_garage
+
