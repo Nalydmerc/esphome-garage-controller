@@ -36,7 +36,7 @@ captive_portal:
 
 binary_sensor:
   - platform: gpio
-    pin: 16
+    pin: 12
     name: "Right Garage Door"
     device_class: garage_door
   - platform: gpio
