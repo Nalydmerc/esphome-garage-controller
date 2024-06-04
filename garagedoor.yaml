@@ -5,7 +5,6 @@ esphome:
 esp8266:
   board: d1_mini
   early_pin_init: false
-  # restore_from_flash: true
 
 # Enable logging
 logger:
@@ -25,6 +24,8 @@ wifi:
   use_address: YOUR_IP_HERE
   on_connect:
     - then:
+      # Because of the circuit on the esp8266, switch.turn_on actually turns the LED OFF.
+      # So look for the LED to turn OFF once it has successfully connected to wifi. 
       - switch.turn_on: led
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
