@@ -1,0 +1,16 @@
+Reference,Value,Footprint,Datasheet,Digikey PN,Qty
+"D1, D2",1N4148TR,Diode_THT:D_DO-35_SOD27_P10.16mm_Horizontal,,1N4148FSCT-ND,2
+D3,SMAJ12A,Diode_SMD:D_SMA_Handsoldering,https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diodes/littelfuse_tvs_diode_smaj_datasheet.pdf.pdf,SMAJ12ALFCT-ND,1
+"D4, D5",SMA6J5.0A-TR,Diode_SMD:D_SMA_Handsoldering,https://www.st.com/content/ccc/resource/technical/document/datasheet/56/26/d7/6f/22/8c/4e/b3/CD00152688.pdf/files/CD00152688.pdf/_jcr_content/translations/en.CD00152688.pdf,497-5938-1-ND,2
+H1-H4,MountingHole,MountingHole:MountingHole_3.2mm_M3,~,,4
+J1,1935161,TerminalBlock:TerminalBlock_bornier-2_P5.08mm,,https://www.aliexpress.us/item/3256805408760426.html,1
+"J2, J3",EB21A-04-C,TerminalBlock:TerminalBlock_bornier-4_P5.08mm,~,https://www.aliexpress.us/item/3256805408760426.html,2
+JP1,Jumper_2_Bridged,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,~,S9337-ND,1
+"K1, K2",SRD-12VDC-SL-C,000-Footprints:Relay_SPDT_Songle,https://www.finder-relais.net/de/finder-relais-serie-40.pdf,https://www.aliexpress.us/item/3256802839040760.html,2
+"Q1, Q2",BS170-D26Z,Package_TO_SOT_THT:TO-92_Inline_Wide,,BS170-D26ZCT-ND,2
+Q3,IRFR9024NTRLPBF,Package_TO_SOT_SMD:TO-252-2,,IRFR9024NTRLPBFCT-ND,1
+R1-R4,100k,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal,~,,4
+S1,EG1224,000-Footprints:SW_E-Switch_EG1224_SPDT_Angled,,EG2585-ND,1
+TP1-TP5,TestPoint,TestPoint:TestPoint_Pad_1.5x1.5mm,~,,5
+U1,LM2596,000-Footprints:LM2596Module,,https://www.aliexpress.us/item/3256804718557368.html,1
+U2,WeMos_D1_mini,000-Footprints:wemos-d1-mini-with-pin-header-and-connector,http://www.wemos.cc/Products/d1_mini.html,https://www.aliexpress.us/item/3256805831695231.html,1
