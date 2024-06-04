@@ -4,9 +4,13 @@ I am a forgetful man. I forget to close the garage door. My wife gets frustrated
 
 The device uses an ESP8266 running ESPHome to connect to HomeAssistant and do garage door things. I used a hall effect sensor to detect if each door was open or closed, but you could use any contact that opens/closes depending on the state of the door. To open and close the doors, I just wired in a relay in parallel with each button. YMMV, but for mine this did mean I had to physically disassemble each button and solder extra wires onto the PCB.
 
-This project was designed to be cheap, as opposed to involved. You can build your own buck converters into your projects (I have in the past), but at the end of the day it's still cheaper to buy one of those cheap adjustable converters on aliexpress and call it a day. Sure there's 0.4V of switching noise, but the D1 Mini has a built in LDO anyway, as do most cheap development boards. ¯\\_(ツ)_/¯ A good project is one that is finished to spec, and my spec is that it works.
+This project was designed to be cheap, as opposed to involved. You can build your own buck converters into your projects (I have in the past), but at the end of the day it's still cheaper to buy one of those cheap adjustable converters on aliexpress and call it a day. Sure there's 0.4V of switching noise, but the D1 Mini has a built in LDO anyway, as do most cheap development boards. ¯\\\_(ツ)\_/¯ A good project is one that is finished to spec, and my spec is that it works.
+
+![diagram](Diagram.png)
 
 ### Mechanical Assembly and Bill of Materials
+
+![mechanical assembly](enclosure-models/Assembly.PNG)
 
 .step files for a 3D printed enclosure are included in this project. The backplate uses M3 screws to mount the PCB, and M4 screws to attach the top. Other Non-PCB materials are as follows:
 
